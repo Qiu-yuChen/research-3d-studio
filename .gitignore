@@ -1,0 +1,36 @@
+node_modules/
+dist/
+test-results/
+playwright-report/
+.DS_Store
+*.log
+.env*
+
+# Local credentials and machine-specific settings
+.npmrc
+.netrc
+.ssh/
+*.pem
+*.key
+*.p12
+*.pfx
+.vscode/
+.idea/
+.codex/
+AGENTS.md
+
+# Imported research data and generated exports belong outside the repository.
+data/
+datasets/
+workspaces/
+exports/
+releases/
+*.r3d.json
+*.r3d.zip
+*.zip
+*.tar
+*.gz
+*.bak
+*.tmp
+*.map
+coverage/

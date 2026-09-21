@@ -1,0 +1,9 @@
+path,sample,method,category,prompt,clip,ulip2
+ours/chair.glb,chair,ours,Furniture,A wooden chair with open armrests,0.300,0.240
+base/chair.glb,chair,base,Furniture,A wooden chair with open armrests,0.282,0.218
+ours/vase.glb,vase,ours,Objects,A ceramic vase with a broad rounded body,0.312,0.253
+base/vase.glb,vase,base,Objects,A ceramic vase with a broad rounded body,0.294,0.231
+ours/lamp.glb,lamp,ours,Lighting,A brass table lamp with a conical shade,0.324,0.266
+base/lamp.glb,lamp,base,Lighting,A brass table lamp with a conical shade,0.306,0.244
+ours/knot.glb,knot,ours,Geometry,A smooth interlocking sculptural knot,0.336,0.279
+base/knot.glb,knot,base,Geometry,A smooth interlocking sculptural knot,0.318,0.257

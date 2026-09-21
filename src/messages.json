@@ -1,0 +1,1166 @@
+{
+  "appTitle": {
+    "en": "Research 3D Studio · Research workspace",
+    "zh": "Research 3D Studio · 科研出图工作区"
+  },
+  "privacy": {
+    "en": "Local processing · No file uploads",
+    "zh": "本地处理 · 文件不上传"
+  },
+  "help": {
+    "en": "Quick guide",
+    "zh": "使用指南"
+  },
+  "openProject": {
+    "en": "Open project",
+    "zh": "打开工程"
+  },
+  "saveProject": {
+    "en": "Save project ↓",
+    "zh": "保存工程 ↓"
+  },
+  "packProject": {
+    "en": "Pack project ZIP",
+    "zh": "打包工程 ZIP"
+  },
+  "packProjectHint": {
+    "en": "Include models and textures for use on another computer",
+    "zh": "把模型与纹理一起打包，可在其他电脑打开"
+  },
+  "workspace": {
+    "en": "Workspace",
+    "zh": "工作区"
+  },
+  "chooseWorkspace": {
+    "en": "＋ Choose workspace",
+    "zh": "＋ 选择工作区文件夹"
+  },
+  "appendWorkspace": {
+    "en": "＋ Add workspace / folder",
+    "zh": "＋ 追加工作区 / 文件夹"
+  },
+  "addFiles": {
+    "en": "Add files",
+    "zh": "添加文件"
+  },
+  "refresh": {
+    "en": "↻ Refresh",
+    "zh": "↻ 刷新"
+  },
+  "reconnectLast": {
+    "en": "Reconnect last workspace",
+    "zh": "重新连接上次工作区"
+  },
+  "noWorkspace": {
+    "en": "No workspace selected",
+    "zh": "尚未选择工作区"
+  },
+  "chooseWorkspaceHint": {
+    "en": "Choose a folder to organize its 3D models and textures.",
+    "zh": "选择文件夹，自动整理其中的 3D 模型与纹理。"
+  },
+  "autoRefresh": {
+    "en": "Check for folder changes",
+    "zh": "自动检查目录变化"
+  },
+  "connectedWorkspaces": {
+    "en": "Connected workspaces",
+    "zh": "已连接的工作区"
+  },
+  "zeroModels": {
+    "en": "0 models",
+    "zh": "0 个模型"
+  },
+  "workspaceFolders": {
+    "en": "Workspace folders",
+    "zh": "工作区目录"
+  },
+  "importMetrics": {
+    "en": "Import metrics / prompts",
+    "zh": "导入指标 / Prompt"
+  },
+  "csvTemplate": {
+    "en": "Download CSV template ↓",
+    "zh": "下载 CSV 模板 ↓"
+  },
+  "openDemo": {
+    "en": "Open demo workspace ↗",
+    "zh": "打开示例工作区 ↗"
+  },
+  "heading": {
+    "en": "Your 3D research workspace",
+    "zh": "你的 3D 研究工作台"
+  },
+  "subheading": {
+    "en": "Organize models, compare views, and export every angle.",
+    "zh": "整理模型，同步对照，把每一个视角保存下来。"
+  },
+  "libraryTab": {
+    "en": "▦ Model library",
+    "zh": "▦ 模型库"
+  },
+  "compareTab": {
+    "en": "◫ Compare",
+    "zh": "◫ 对照台"
+  },
+  "filters": {
+    "en": "Model filters",
+    "zh": "模型筛选"
+  },
+  "searchPlaceholder": {
+    "en": "Search files, categories, methods, or prompts…",
+    "zh": "搜索文件、类别、方法或 prompt…"
+  },
+  "searchModels": {
+    "en": "Search models",
+    "zh": "搜索模型"
+  },
+  "category": {
+    "en": "Category",
+    "zh": "类别"
+  },
+  "allCategories": {
+    "en": "All categories",
+    "zh": "全部类别"
+  },
+  "sort": {
+    "en": "Sort by",
+    "zh": "排序"
+  },
+  "sortName": {
+    "en": "File name",
+    "zh": "文件名称"
+  },
+  "sortModified": {
+    "en": "Modified",
+    "zh": "修改时间"
+  },
+  "sortSize": {
+    "en": "File size",
+    "zh": "文件大小"
+  },
+  "sortFormat": {
+    "en": "Format",
+    "zh": "文件格式"
+  },
+  "sortMetric": {
+    "en": "Metric score",
+    "zh": "指标分数"
+  },
+  "sortDelta": {
+    "en": "Δ Metric difference",
+    "zh": "Δ 指标差值"
+  },
+  "sortDirectionHint": {
+    "en": "Toggle ascending or descending order",
+    "zh": "切换升序或降序"
+  },
+  "ascending": {
+    "en": "↑ Ascending",
+    "zh": "↑ 升序"
+  },
+  "groupComparison": {
+    "en": "Compare across folders",
+    "zh": "文件夹协同对照"
+  },
+  "layout": {
+    "en": "Layout",
+    "zh": "展示方式"
+  },
+  "layoutMatched": {
+    "en": "Match by name",
+    "zh": "同名自动对照"
+  },
+  "layoutFolders": {
+    "en": "Group by folder",
+    "zh": "按文件夹展示"
+  },
+  "layoutGrid": {
+    "en": "All models grid",
+    "zh": "平铺全部模型"
+  },
+  "matchRule": {
+    "en": "Match by",
+    "zh": "匹配规则"
+  },
+  "matchName": {
+    "en": "Full file name",
+    "zh": "完整文件名"
+  },
+  "matchStem": {
+    "en": "Name without extension",
+    "zh": "文件名（忽略扩展名）"
+  },
+  "matchRelative": {
+    "en": "Relative path in group",
+    "zh": "组内相对路径"
+  },
+  "comparisonFolders": {
+    "en": "Folders to compare",
+    "zh": "参与对照的文件夹"
+  },
+  "metric": {
+    "en": "Metric",
+    "zh": "指标"
+  },
+  "deltaRange": {
+    "en": "Δ Range",
+    "zh": "Δ 范围"
+  },
+  "all": {
+    "en": "All",
+    "zh": "全部"
+  },
+  "positive": {
+    "en": "Greater than 0",
+    "zh": "大于 0"
+  },
+  "negative": {
+    "en": "Less than 0",
+    "zh": "小于 0"
+  },
+  "deltaInitial": {
+    "en": "Δ = OURS − BASE; missing values appear last.",
+    "zh": "Δ = OURS − BASE；空值排在末尾。"
+  },
+  "selectResults": {
+    "en": "Select filtered models",
+    "zh": "全选筛选结果"
+  },
+  "clearSelection": {
+    "en": "Clear selection",
+    "zh": "清空选择"
+  },
+  "compareSelected": {
+    "en": "Compare selection",
+    "zh": "同步对照"
+  },
+  "emptyHeading": {
+    "en": "Start with a workspace",
+    "zh": "给研究一个工作区"
+  },
+  "emptyHint1": {
+    "en": "Drop models or a folder, or choose a workspace on the left.",
+    "zh": "拖入模型或整个文件夹，或者从左侧选择工作区。"
+  },
+  "emptyHint2": {
+    "en": "Files are read and rendered locally in your browser.",
+    "zh": "文件只在当前浏览器内读取和渲染。"
+  },
+  "tryDemo": {
+    "en": "Try demo models →",
+    "zh": "试用示例模型 →"
+  },
+  "moreModels": {
+    "en": "Show more models",
+    "zh": "显示更多模型"
+  },
+  "previousMethods": {
+    "en": "← Previous methods",
+    "zh": "← 上一组方法"
+  },
+  "nextMethods": {
+    "en": "Next methods →",
+    "zh": "下一组方法 →"
+  },
+  "syncCamera": {
+    "en": "Sync cameras",
+    "zh": "同步相机"
+  },
+  "fitView": {
+    "en": "Fit model",
+    "zh": "适配模型"
+  },
+  "resetView": {
+    "en": "Reset view",
+    "zh": "标准视角"
+  },
+  "saveCamera": {
+    "en": "Export camera",
+    "zh": "导出相机"
+  },
+  "loadCamera": {
+    "en": "Import camera",
+    "zh": "导入相机"
+  },
+  "interactionHint": {
+    "en": "Scroll inside a canvas to zoom, outside to scroll the page · Drag to rotate · Right-drag to pan",
+    "zh": "画布内滚轮缩放模型，画布外滚动页面 · 拖动旋转 · 右键平移"
+  },
+  "compareEmptyHeading": {
+    "en": "Select models to compare",
+    "zh": "选择模型开始对照"
+  },
+  "compareEmptyHint1": {
+    "en": "Select models in the library, then click “Compare selection”.",
+    "zh": "在模型库勾选模型，点击「同步对照」。"
+  },
+  "compareEmptyHint2": {
+    "en": "Click a thumbnail to preview a model. Compare up to four models per page.",
+    "zh": "每页最多显示 4 个模型；单击缩略图可直接预览。"
+  },
+  "focusHint": {
+    "en": "Click a model title to select it, then adjust its axes and transform on the right.",
+    "zh": "点击模型标题选中它，再在右侧调整轴向和姿态。"
+  },
+  "exportQueue": {
+    "en": "In the export queue",
+    "zh": "已选入导出队列"
+  },
+  "exportBatch": {
+    "en": "Export figures ZIP ↗",
+    "zh": "导出素材包 ZIP ↗"
+  },
+  "figureSettings": {
+    "en": "Figure settings",
+    "zh": "出图设置"
+  },
+  "displayPass": {
+    "en": "Render pass",
+    "zh": "显示通道"
+  },
+  "optionColor": {
+    "en": "Color · Unlit",
+    "zh": "原色 · Unlit"
+  },
+  "optionRelight": {
+    "en": "Relit",
+    "zh": "重新布光 · Relit"
+  },
+  "optionClay": {
+    "en": "Clay",
+    "zh": "灰模 · Clay"
+  },
+  "optionNormal": {
+    "en": "Camera-space normals",
+    "zh": "相机空间法线 · Normal"
+  },
+  "optionDepth": {
+    "en": "Linear depth",
+    "zh": "线性深度 · Depth"
+  },
+  "optionMask": {
+    "en": "Foreground mask",
+    "zh": "前景蒙版 · Mask"
+  },
+  "projection": {
+    "en": "Projection",
+    "zh": "投影"
+  },
+  "perspective": {
+    "en": "Perspective",
+    "zh": "透视"
+  },
+  "orthographic": {
+    "en": "Orthographic",
+    "zh": "正交"
+  },
+  "background": {
+    "en": "Preview background",
+    "zh": "预览底色"
+  },
+  "checker": {
+    "en": "Checkerboard",
+    "zh": "透明棋盘"
+  },
+  "white": {
+    "en": "White",
+    "zh": "白色"
+  },
+  "dark": {
+    "en": "Dark",
+    "zh": "深色"
+  },
+  "normalize": {
+    "en": "Center and normalize size",
+    "zh": "居中并统一最大边长"
+  },
+  "transformHint": {
+    "en": "Transforms apply to preview and export, and are saved in the project.",
+    "zh": "变换只作用于查看与导出，记录在工程中。"
+  },
+  "camera": {
+    "en": "Camera",
+    "zh": "相机 / Camera"
+  },
+  "azimuth": {
+    "en": "Azimuth °",
+    "zh": "方位角 °"
+  },
+  "elevation": {
+    "en": "Elevation °",
+    "zh": "仰角 °"
+  },
+  "distance": {
+    "en": "Distance",
+    "zh": "距离"
+  },
+  "fov": {
+    "en": "Field of view °",
+    "zh": "视场角 °"
+  },
+  "orthoSpan": {
+    "en": "Orthographic span",
+    "zh": "正交画幅"
+  },
+  "relighting": {
+    "en": "Relighting",
+    "zh": "自动布光 / Relighting"
+  },
+  "autoLight": {
+    "en": "✦ Auto three-point lighting",
+    "zh": "✦ 自动三点布光"
+  },
+  "lightStyle": {
+    "en": "Lighting style",
+    "zh": "布光风格"
+  },
+  "lightStudio": {
+    "en": "Neutral studio",
+    "zh": "中性摄影棚"
+  },
+  "lightSoft": {
+    "en": "Soft fill",
+    "zh": "柔和填充"
+  },
+  "lightRim": {
+    "en": "Rim emphasis",
+    "zh": "轮廓强调"
+  },
+  "intensity": {
+    "en": "Intensity",
+    "zh": "光强"
+  },
+  "exposure": {
+    "en": "Exposure",
+    "zh": "曝光"
+  },
+  "lightHint": {
+    "en": "Position key, fill, and rim lights relative to the camera. Uses existing surface colors; no AI delighting or material reconstruction.",
+    "zh": "根据视角自动布置主光、补光和轮廓光。使用已有表面颜色；不执行 AI 去光照或材质重建。"
+  },
+  "transform": {
+    "en": "Model transform",
+    "zh": "模型姿态 / Transform"
+  },
+  "previewFirst": {
+    "en": "Preview a model first",
+    "zh": "先预览一个模型"
+  },
+  "upAxis": {
+    "en": "Native up axis",
+    "zh": "原生向上轴"
+  },
+  "modelScale": {
+    "en": "Additional scale",
+    "zh": "附加缩放"
+  },
+  "surface": {
+    "en": "Gaussian companion mesh",
+    "zh": "Gaussian 配对表面网格"
+  },
+  "unpaired": {
+    "en": "Not paired",
+    "zh": "未配对"
+  },
+  "surfaceHint": {
+    "en": "Gaussian normals, clay, and relighting use the companion mesh. The export manifest records the source representation.",
+    "zh": "Gaussian 的法线、灰模和重光照由配对网格提供，导出清单会标明表示来源。"
+  },
+  "depthEncoding": {
+    "en": "Depth encoding",
+    "zh": "深度编码 / Depth"
+  },
+  "depthNear": {
+    "en": "Near depth",
+    "zh": "近端深度"
+  },
+  "depthFar": {
+    "en": "Far depth",
+    "zh": "远端深度"
+  },
+  "depthHint": {
+    "en": "Camera-space Z as 8-bit PNG grayscale, clipped to the selected range. The manifest records the range and normalization.",
+    "zh": "相机空间 Z，PNG 8-bit 灰度；区间外截断。范围与归一化变换记录在素材清单。"
+  },
+  "metadata": {
+    "en": "Sample metadata",
+    "zh": "样本信息 / Metadata"
+  },
+  "sampleId": {
+    "en": "Sample ID for pairing",
+    "zh": "配对样本 ID"
+  },
+  "methodName": {
+    "en": "Method name",
+    "zh": "方法名称"
+  },
+  "promptPlaceholder": {
+    "en": "Text prompt for this model",
+    "zh": "模型对应的提示词"
+  },
+  "metadataHint": {
+    "en": "Edits are saved in the project, leaving source files intact. Methods with the same sample ID are paired for Δ.",
+    "zh": "修改后写入工程；不改原文件。相同样本 ID 的不同方法用于 Δ 配对。"
+  },
+  "export": {
+    "en": "Export",
+    "zh": "导出 / Export"
+  },
+  "pngSize": {
+    "en": "Transparent PNG size",
+    "zh": "透明 PNG 尺寸"
+  },
+  "exportCurrent": {
+    "en": "Download current PNG ↓",
+    "zh": "下载当前视图 PNG ↓"
+  },
+  "exportPasses": {
+    "en": "Batch render passes",
+    "zh": "批量导出通道"
+  },
+  "multiView": {
+    "en": "Multi-view turntable",
+    "zh": "多视角转台"
+  },
+  "views": {
+    "en": "Azimuths (comma-separated)",
+    "zh": "方位角列表（逗号分隔）"
+  },
+  "columns": {
+    "en": "Sheet columns",
+    "zh": "拼图列数"
+  },
+  "padding": {
+    "en": "Padding px",
+    "zh": "留白 px"
+  },
+  "editableLabels": {
+    "en": "Keep editable sheet labels",
+    "zh": "拼图保留可编辑标签"
+  },
+  "caption": {
+    "en": "Sheet title",
+    "zh": "拼图标题"
+  },
+  "exportHint": {
+    "en": "The ZIP includes individual PNGs, editable SVG sheets, and a JSON manifest. All exported images have transparent backgrounds.",
+    "zh": "ZIP 包含独立 PNG、可编辑 SVG 拼图与 JSON 素材清单。所有导出图片均为透明底。"
+  },
+  "ready": {
+    "en": "Ready",
+    "zh": "准备就绪"
+  },
+  "dropWorkspace": {
+    "en": "Drop to import a workspace",
+    "zh": "释放以导入工作区"
+  },
+  "dropTypes": {
+    "en": "Models · Folders · Project ZIP",
+    "zh": "模型 · 文件夹 · 工程 ZIP"
+  },
+  "preparingExport": {
+    "en": "Preparing research figures",
+    "zh": "正在准备研究素材"
+  },
+  "cancelExport": {
+    "en": "Cancel export",
+    "zh": "取消导出"
+  },
+  "helpHeading": {
+    "en": "From folders to paper figures",
+    "zh": "从文件夹到论文图"
+  },
+  "help1": {
+    "en": "Choose one or more workspaces. Compare each workspace as a group, or group by one to three subfolder levels.",
+    "zh": "选择工作区，或追加多个工作区。每个工作区可整组比较，或按 1–3 层子目录分组。"
+  },
+  "help2": {
+    "en": "Matching models line up automatically. Missing methods stay empty; unmatched and conflicting names remain grouped by folder. You can change the matching rule.",
+    "zh": "同名模型自动成行；缺少的方法留空，未匹配或重名冲突按文件夹保留。可调整匹配规则。"
+  },
+  "help3": {
+    "en": "Click “Compare row” for synchronized views. Page through more than four methods, and add any number of models to the export queue.",
+    "zh": "点击「对照本行」同步查看。超过 4 个方法可翻页，全部模型都可加入导出队列。"
+  },
+  "help4": {
+    "en": "Adjust the camera, axes, and lighting. Original color, relighting, and data passes remain separate.",
+    "zh": "调整相机、轴向和布光。原色、重光照与数据通道分别保留。"
+  },
+  "help5": {
+    "en": "Download a single image, or batch-export models, views, and passes.",
+    "zh": "下载单张图片，或批量导出不同模型、视角和通道。"
+  },
+  "help6": {
+    "en": "Save settings as a project JSON, or pack a project ZIP that includes the files.",
+    "zh": "保存工程 JSON 记录配置，或打包 ZIP 连同文件一起保存。"
+  },
+  "helpMetrics": {
+    "en": "Metrics CSVs use path, sample, method, category, prompt, and custom numeric columns. Δ pairs by sample and requires exactly one valid score for each method.",
+    "zh": "指标 CSV 使用 path、sample、method、category、prompt 和自定义数值列。Δ 通过 sample 配对，仅当两种方法各有一条记录且分数有效时计算。"
+  },
+  "helpFolders": {
+    "en": "Folder connections depend on browser support. Chrome / Edge can retain folder handles and rescan; other browsers use snapshots that must be reimported after changes. Project JSON does not include model files.",
+    "zh": "目录连接依赖浏览器支持。Chrome / Edge 可保留目录句柄并重新扫描；其他浏览器使用文件夹快照，更新后重新导入。工程 JSON 不包含模型文件。"
+  },
+  "helpGaussian": {
+    "en": "Gaussian splats have no reliable surface material. Pair a mesh for normals and relighting. Rendered pixels may vary slightly across devices.",
+    "zh": "普通 Gaussian 没有可靠的表面材质；配对网格后，法线和重新布光使用网格。跨设备的渲染像素可能有细微差异。"
+  },
+  "getStarted": {
+    "en": "Get started",
+    "zh": "开始使用"
+  },
+  "language": {
+    "en": "Language",
+    "zh": "语言"
+  },
+  "color": {
+    "en": "Color",
+    "zh": "原色"
+  },
+  "relight": {
+    "en": "Relit",
+    "zh": "重光照"
+  },
+  "clay": {
+    "en": "Clay",
+    "zh": "灰模"
+  },
+  "normal": {
+    "en": "Normals",
+    "zh": "法线"
+  },
+  "depth": {
+    "en": "Depth",
+    "zh": "深度"
+  },
+  "mask": {
+    "en": "Mask",
+    "zh": "蒙版"
+  },
+  "workspaceHint": {
+    "en": "Choose a workspace, then add folders to compare across workspaces.",
+    "zh": "选择一个工作区，再追加其他文件夹进行对照。"
+  },
+  "refreshHint": {
+    "en": "Rescan connected folders. Use each workspace’s update button for snapshots.",
+    "zh": "扫描所有已连接目录；文件快照请使用各工作区的更新按钮"
+  },
+  "removeWorkspaceHint": {
+    "en": "Remove this workspace (files are kept)",
+    "zh": "移除此工作区（不删除文件）"
+  },
+  "connectedFolder": {
+    "en": "Connected folder",
+    "zh": "目录连接"
+  },
+  "fileSnapshot": {
+    "en": "File snapshot",
+    "zh": "文件快照"
+  },
+  "grouping": {
+    "en": "Grouping",
+    "zh": "对照分组"
+  },
+  "wholeWorkspace": {
+    "en": "Whole workspace",
+    "zh": "整个工作区"
+  },
+  "depth1": {
+    "en": "First-level folders",
+    "zh": "一级子目录"
+  },
+  "depth2": {
+    "en": "Second-level folders",
+    "zh": "二级子目录"
+  },
+  "depth3": {
+    "en": "Third-level folders",
+    "zh": "三级子目录"
+  },
+  "updateReconnect": {
+    "en": "Update / reconnect",
+    "zh": "更新 / 重新连接"
+  },
+  "allModels": {
+    "en": "▦ All models",
+    "zh": "▦ 全部模型"
+  },
+  "deltaNote": {
+    "en": "Δ = OURS − BASE, paired by sample. Missing or duplicate pairs stay empty; imported units are preserved.",
+    "zh": "Δ = OURS − BASE，同一样本配对；缺失或重复配对留空。数值保持导入量纲。"
+  },
+  "metricNote": {
+    "en": "Sort by imported values; missing scores stay empty and appear last.",
+    "zh": "按导入数值排序；缺失留空并排在末尾。"
+  },
+  "noMetrics": {
+    "en": "No metrics imported",
+    "zh": "未导入指标"
+  },
+  "nameConflict": {
+    "en": "Name conflict · Use relative paths or change grouping",
+    "zh": "重名冲突 · 改用组内相对路径或调整分组"
+  },
+  "compareRow": {
+    "en": "Compare row →",
+    "zh": "对照本行 →"
+  },
+  "addToExport": {
+    "en": "Add to export",
+    "zh": "加入导出"
+  },
+  "unmatchedPrefix": {
+    "en": "Unmatched / conflicts ·",
+    "zh": "未匹配 / 冲突 ·"
+  },
+  "unmatchedTitle": {
+    "en": "Unmatched models · Grouped by folder",
+    "zh": "未匹配模型 · 按文件夹保留"
+  },
+  "noVisibleModels": {
+    "en": "No models to show. Check the filters and enabled folders.",
+    "zh": "没有可显示的模型，请检查筛选条件和参与对照的文件夹。"
+  },
+  "noMatchingModels": {
+    "en": "No matching models.",
+    "zh": "没有符合条件的模型。"
+  },
+  "alreadyConnected": {
+    "en": "This folder is already connected. Refreshing…",
+    "zh": "该目录已经连接，正在刷新…"
+  },
+  "scanning": {
+    "en": "Scanning the workspace recursively…",
+    "zh": "正在递归扫描工作区…"
+  },
+  "snapshotRefresh": {
+    "en": "These workspaces are snapshots. Use “Update / reconnect” for each workspace.",
+    "zh": "当前工作区为文件快照，请使用各工作区的「更新 / 重新连接」。"
+  },
+  "syncedFiles": {
+    "en": "Synced changes from all accessible workspaces",
+    "zh": "已同步所有可访问工作区的文件变化"
+  },
+  "upToDate": {
+    "en": "Workspace is up to date",
+    "zh": "工作区已是最新"
+  },
+  "loadingModel": {
+    "en": "Loading model…",
+    "zh": "正在加载模型…"
+  },
+  "surfaceRequired": {
+    "en": "This pass requires a surface mesh. Showing original color; pair a mesh or choose another pass.",
+    "zh": "此通道需要表面网格；当前显示原色。请配对网格或切换通道。"
+  },
+  "fromMesh": {
+    "en": " · From companion mesh",
+    "zh": " · 来自配对网格"
+  },
+  "projectRestored": {
+    "en": "Project and camera settings restored",
+    "zh": "工程与相机设置已恢复"
+  },
+  "loadingDemo": {
+    "en": "Loading the bundled demo…",
+    "zh": "读取随应用提供的示例…"
+  },
+  "descending": {
+    "en": "↓ Descending",
+    "zh": "↓ 降序"
+  },
+  "lightEnabled": {
+    "en": "Auto lighting enabled: lights follow the view direction; original color remains available separately",
+    "zh": "自动布光已启用：灯光随观察方向布置，原色通道保持独立"
+  },
+  "invalidTransformInput": {
+    "en": "Enter valid rotation values and a positive scale",
+    "zh": "请输入有效的旋转和正缩放"
+  },
+  "metadataUpdated": {
+    "en": "Sample metadata updated",
+    "zh": "样本信息已更新"
+  },
+  "openModelFirst": {
+    "en": "Open a model first",
+    "zh": "先打开一个模型"
+  },
+  "cameraRestored": {
+    "en": "Camera restored",
+    "zh": "相机已恢复"
+  },
+  "projectSaved": {
+    "en": "Project saved. Reconnect model files when opening it in another browser.",
+    "zh": "工程已保存；在其他浏览器打开时需重新连接模型文件"
+  },
+  "portableSaved": {
+    "en": "Portable project saved with models, textures, and all settings",
+    "zh": "便携工程已保存，包含模型、纹理和全部设置"
+  },
+  "cancelAfterImage": {
+    "en": "Stopping after the current image finishes…",
+    "zh": "将在当前图片完成后停止…"
+  },
+  "previousSettings": {
+    "en": "Previous settings restored. Choose a workspace or open a portable project to reload models.",
+    "zh": "已恢复上次设置；选择工作区或打开便携工程以重新载入模型"
+  },
+  "packingFigures": {
+    "en": "Packing individual PNGs, editable sheets, and the manifest…",
+    "zh": "打包独立 PNG、可编辑拼图与参数清单…"
+  },
+  "uncategorized": {
+    "en": "Uncategorized",
+    "zh": "未分类"
+  },
+  "outsideWorkspace": {
+    "en": "File reference escapes the workspace",
+    "zh": "文件引用超出工作区"
+  },
+  "csvQuote": {
+    "en": "CSV contains an unclosed quote",
+    "zh": "CSV 引号未闭合"
+  },
+  "csvDuplicate": {
+    "en": "CSV contains duplicate column names",
+    "zh": "CSV 存在重复列名"
+  },
+  "metadataArray": {
+    "en": "Metrics must be an array of records or an object with an assets array",
+    "zh": "指标文件应为记录数组，或包含 assets 数组"
+  },
+  "metadataPath": {
+    "en": "Each metrics record must include a path column",
+    "zh": "每条指标记录必须有 path 列"
+  },
+  "invalidAngles": {
+    "en": "Enter 1–24 comma-separated view angles",
+    "zh": "视角请输入 1–24 个逗号分隔的角度"
+  },
+  "invalidDepth": {
+    "en": "Far depth must be greater than near depth",
+    "zh": "深度上限必须大于下限"
+  },
+  "unsupportedSettings": {
+    "en": "Project contains unsupported display settings",
+    "zh": "工程包含不支持的显示设置"
+  },
+  "unknownPass": {
+    "en": "Unknown export pass",
+    "zh": "未知导出通道"
+  },
+  "invalidProject": {
+    "en": "This is not a Research 3D Studio v1 project",
+    "zh": "不是 Research 3D Studio v1 工程"
+  },
+  "tooManyRecords": {
+    "en": "Project contains too many records",
+    "zh": "工程记录过多"
+  },
+  "invalidSelection": {
+    "en": "Invalid project selection list",
+    "zh": "工程选择列表无效"
+  },
+  "invalidPaging": {
+    "en": "Invalid comparison pagination",
+    "zh": "工程对照分页无效"
+  },
+  "invalidPaths": {
+    "en": "Project paths are duplicated or invalid",
+    "zh": "工程路径重复或无效"
+  },
+  "invalidTransform": {
+    "en": "Invalid model transform",
+    "zh": "模型变换无效"
+  },
+  "invalidUpAxis": {
+    "en": "Invalid model up axis",
+    "zh": "模型竖直轴无效"
+  },
+  "invalidCameraParams": {
+    "en": "Invalid project camera parameters",
+    "zh": "工程相机参数无效"
+  },
+  "networkResource": {
+    "en": "The model references a network resource. Include textures in the workspace alongside the model.",
+    "zh": "模型引用了网络资源；请把纹理与模型一起放入工作区"
+  },
+  "textureNotLoaded": {
+    "en": "Material texture did not load",
+    "zh": "材质纹理未载入"
+  },
+  "emptyModel": {
+    "en": "Model is empty or contains invalid coordinates",
+    "zh": "模型为空或包含无效坐标"
+  },
+  "modelDisconnected": {
+    "en": "Model file is not connected",
+    "zh": "模型文件未连接"
+  },
+  "modelNotLoaded": {
+    "en": "Model has not loaded yet",
+    "zh": "模型尚未载入"
+  },
+  "gaussianPass": {
+    "en": "Gaussian splats need a companion surface mesh to export this pass",
+    "zh": "Gaussian 需要配对表面网格才能导出此通道"
+  },
+  "pointCloudPass": {
+    "en": "Point clouds do not provide surface normals, depth, or lighting passes",
+    "zh": "点云不提供表面法线、深度或布光通道"
+  },
+  "exportSize": {
+    "en": "Export size exceeds this device’s limit",
+    "zh": "导出尺寸超过设备上限"
+  },
+  "pngEncoding": {
+    "en": "PNG encoding failed",
+    "zh": "PNG 编码失败"
+  },
+  "waitForExport": {
+    "en": "Wait for the current export to finish",
+    "zh": "请等待当前导出完成"
+  },
+  "noProjectJson": {
+    "en": "ZIP does not contain project.json",
+    "zh": "ZIP 中没有 project.json"
+  },
+  "demoResource": {
+    "en": "Failed to load a demo asset",
+    "zh": "示例资源载入失败"
+  },
+  "noSavedFolders": {
+    "en": "No saved folder connections",
+    "zh": "没有保存的目录连接"
+  },
+  "notAuthorized": {
+    "en": "Permission not granted",
+    "zh": "未授权"
+  },
+  "invalidCamera": {
+    "en": "Invalid camera file",
+    "zh": "无效的相机文件"
+  },
+  "connectModels": {
+    "en": "Connect model files first",
+    "zh": "先连接模型文件"
+  },
+  "previewModel": {
+    "en": "Preview a model first",
+    "zh": "先预览模型"
+  },
+  "unsupportedPass": {
+    "en": "This model does not support the pass. Pair a mesh or choose original color.",
+    "zh": "当前模型不支持此通道，请配对网格或选择原色"
+  },
+  "selectExportModels": {
+    "en": "Select models to export first",
+    "zh": "先选择要导出的模型"
+  },
+  "selectExportPasses": {
+    "en": "Select at least one export pass",
+    "zh": "至少选择一个导出通道"
+  },
+  "exportBudget": {
+    "en": "This batch exceeds the 1 GiB pixel-buffer budget. Use fewer models, passes, or views, or reduce resolution and export in batches.",
+    "zh": "该批次的像素缓冲预算超过 1 GiB。请减少模型 / 通道 / 视角，或降低分辨率后分批导出。"
+  },
+  "exportCancelled": {
+    "en": "Export cancelled",
+    "zh": "导出已取消"
+  },
+  "meshPassUnavailable": {
+    "en": "The companion mesh cannot provide this pass",
+    "zh": "配对网格无法提供此通道"
+  },
+  "noSurfacePass": {
+    "en": "This representation has no surface mesh; the pass is unavailable",
+    "zh": "此表示无表面网格，通道不适用"
+  },
+  "invalidSources": {
+    "en": "Invalid project workspace list",
+    "zh": "工程工作区列表无效"
+  },
+  "invalidSourceIds": {
+    "en": "Invalid workspace identity or grouping depth",
+    "zh": "工程工作区标识或分组层级无效"
+  },
+  "invalidGroups": {
+    "en": "Invalid comparison grouping settings",
+    "zh": "工程对照分组设置无效"
+  },
+  "modelCount": {
+    "en": "Models: {count}",
+    "zh": "{count} 个模型"
+  },
+  "fileCount": {
+    "en": " · Files: {count}",
+    "zh": " · {count} 个文件"
+  },
+  "workspaceSummary": {
+    "en": "Workspaces: {count} · Connected folders: {connected} · Snapshots: {snapshots}. Add folders to compare across workspaces.",
+    "zh": "{count} 个工作区 · {connected} 个目录连接 · {snapshots} 个快照。追加文件夹可跨工作区对照。"
+  },
+  "workspaceCount": {
+    "en": "Workspaces: {count}",
+    "zh": "{count} 个工作区协同"
+  },
+  "removeWorkspace": {
+    "en": "Remove {name}",
+    "zh": "移除 {name}"
+  },
+  "groupDepth": {
+    "en": "Grouping depth for {name}",
+    "zh": "{name} 的分组层级"
+  },
+  "resultCount": {
+    "en": "Models: {count} · Categories: {categories}",
+    "zh": "{count} 个模型 · {categories} 个类别"
+  },
+  "selectModel": {
+    "en": "Select {name}",
+    "zh": "选择 {name}"
+  },
+  "previewName": {
+    "en": "Preview {name}",
+    "zh": "预览 {name}"
+  },
+  "thumbnail": {
+    "en": "Thumbnail of {name}",
+    "zh": "{name} 模型缩略图"
+  },
+  "methodCount": {
+    "en": "{count} / {total} methods",
+    "zh": "{count} / {total} 个方法"
+  },
+  "missingMatch": {
+    "en": "No matching file in {name}",
+    "zh": "{name} 暂无同名文件"
+  },
+  "conflictCount": {
+    "en": " · Models with name conflicts: {count}",
+    "zh": " · {count} 个模型存在重名冲突"
+  },
+  "matchSummary": {
+    "en": "Groups: {groups} · Matched samples: {matches}{conflicts}. A filter match keeps the entire comparison row.",
+    "zh": "{groups} 个对照组 · {matches} 个同名组合{conflicts}。筛选命中任一模型时保留整行对照。"
+  },
+  "filesRead": {
+    "en": "{workspace} · Models loaded: {models} · Files: {files}{notice}",
+    "zh": "{workspace} · 已读取 {models} 个模型、{files} 个文件{notice}"
+  },
+  "readingFiles": {
+    "en": "Reading files: {count}…",
+    "zh": "正在读取 {count} 个文件…"
+  },
+  "refreshFailures": {
+    "en": "Could not refresh these workspaces; previous contents are retained: {names}",
+    "zh": "以下工作区未能刷新，已保留之前内容：{names}"
+  },
+  "comparePage": {
+    "en": "Methods {start}–{end} / {total} · Camera stays synchronized across pages",
+    "zh": "方法 {start}–{end} / {total} · 翻页保留同步相机"
+  },
+  "hashProgress": {
+    "en": "Hashing files {current}/{total}",
+    "zh": "记录文件指纹 {current}/{total}"
+  },
+  "changedFiles": {
+    "en": "File contents changed; previous transforms were not applied: {names}",
+    "zh": "有文件内容变化，未套用旧变换：{names}"
+  },
+  "missingModels": {
+    "en": "Models awaiting a workspace connection: {count}",
+    "zh": "仍有 {count} 个模型待连接工作区"
+  },
+  "unauthorizedFolders": {
+    "en": "Some folders still need permission: {names}. Reconnect them individually.",
+    "zh": "部分目录尚未授权：{names}，可单独重新连接"
+  },
+  "comparisonAdded": {
+    "en": "Models added: {count}. Page through all methods, with up to four synchronized viewports per page.",
+    "zh": "已加入 {count} 个模型，可翻页查看全部方法；每页最多 4 个同步视口"
+  },
+  "packingWorkspace": {
+    "en": "Packing workspace {current}/{total}",
+    "zh": "打包工作区 {current}/{total}"
+  },
+  "metricsImported": {
+    "en": "Metrics records imported: {count} · Models matched: {models}",
+    "zh": "导入 {count} 条指标记录；匹配 {models} 个模型"
+  },
+  "pngExported": {
+    "en": "Exported {size} × {size} transparent {pass} PNG",
+    "zh": "已导出 {size} × {size} 透明 {pass} PNG"
+  },
+  "batchExported": {
+    "en": "Exported PNGs: {count}, with editable SVGs · Unavailable or failed passes recorded: {skipped}",
+    "zh": "已导出 {count} 张 PNG 与可编辑 SVG；{skipped} 个不适用或失败通道已记录"
+  },
+  "loadingAsset": {
+    "en": "Loading {name}",
+    "zh": "载入 {name}"
+  },
+  "pathConflict": {
+    "en": "Duplicate path: {path}. Import the parent folder instead.",
+    "zh": "同名路径冲突：{path}。请导入父文件夹。"
+  },
+  "csvColumns": {
+    "en": "Column count does not match on CSV line {line}",
+    "zh": "CSV 第 {line} 行列数不一致"
+  },
+  "duplicateMetricPath": {
+    "en": "Duplicate metrics path: {path}",
+    "zh": "重复指标路径：{path}"
+  },
+  "nonFiniteMetric": {
+    "en": "Metric {metric} in {path} is not a finite number",
+    "zh": "指标 {metric} 在 {path} 中不是有限数值"
+  },
+  "settingRange": {
+    "en": "Setting {setting} is out of range",
+    "zh": "设置 {setting} 超出范围"
+  },
+  "missingResource": {
+    "en": "Missing referenced file: {path}",
+    "zh": "缺少关联文件：{path}"
+  },
+  "missingModel": {
+    "en": "Could not find {path}. Reconnect the original workspace.",
+    "zh": "未找到 {path}，请重新连接原工作区"
+  },
+  "missingMaterial": {
+    "en": "Missing material file: {path}",
+    "zh": "缺少材质文件：{path}"
+  },
+  "unsupportedFormat": {
+    "en": "Unsupported mesh format: {format}",
+    "zh": "不支持的网格格式：{format}"
+  },
+  "resourcesFailed": {
+    "en": "Referenced resources failed to load: {paths}",
+    "zh": "关联资源载入失败：{paths}"
+  },
+  "missingSource": {
+    "en": "No workspace matches the project file: {path}",
+    "zh": "工程文件没有对应工作区：{path}"
+  },
+  "duplicateFile": {
+    "en": "A file named {path} already exists. Add a folder to keep both copies.",
+    "zh": "同名文件 {path} 已存在，请通过追加文件夹来保留两份。"
+  },
+  "noExportImages": {
+    "en": "No images could be exported: {reason}",
+    "zh": "没有可导出的图片：{reason}"
+  },
+  "sourceOverlap": {
+    "en": "Workspace path overlaps an added workspace: {path}. Remove and re-add that workspace.",
+    "zh": "工作区目录与已追加工作区的路径重叠：{path}。请移除后重新添加该追加工作区。"
+  },
+  "sourceConflict": {
+    "en": "Workspace path conflict: {path}. Remove and re-add the workspace.",
+    "zh": "工作区路径冲突：{path}。请移除后重新添加该工作区。"
+  }
+}

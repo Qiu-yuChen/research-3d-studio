@@ -1,0 +1,702 @@
+<!doctype html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta
+      content="Local-first 3D research workspace. Compare models, relight surfaces and export reproducible figures, entirely in your browser."
+      name="description"
+    />
+    <title data-i18n="appTitle">Research 3D Studio · Research workspace</title>
+    <link href="./favicon.svg" rel="icon" type="image/svg+xml" />
+  </head>
+  <body>
+    <header class="topbar">
+      <a class="brand" href="./"
+        ><span class="brand-icon">◈</span
+        ><span
+          >Research <b>3D Studio</b
+          ><small>LOCAL WORKSPACE · v0.3.1</small></span
+        ></a
+      >
+      <div class="privacy">
+        <i></i
+        ><span data-i18n="privacy">Local processing · No file uploads</span>
+      </div>
+      <div class="top-actions">
+        <label class="language-picker"
+          ><span data-i18n="language">Language</span
+          ><select aria-label="Language / 语言" id="language">
+            <option lang="en" value="en">English</option>
+            <option lang="zh-CN" value="zh">中文</option>
+          </select></label
+        >
+        <button class="quiet" data-i18n="help" id="helpButton">
+          Quick guide</button
+        ><button data-i18n="openProject" id="loadProject">Open project</button
+        ><button data-i18n="saveProject" id="saveProject">Save project ↓</button
+        ><button
+          data-i18n="packProject"
+          data-i18n-title="packProjectHint"
+          id="packProject"
+          title="Include models and textures for use on another computer"
+        >
+          Pack project ZIP
+        </button>
+      </div>
+    </header>
+    <div class="shell">
+      <aside class="sidebar">
+        <div class="section-label">
+          WORKSPACE <span data-i18n="workspace">Workspace</span>
+        </div>
+        <button
+          class="primary full"
+          data-i18n="chooseWorkspace"
+          id="openWorkspace"
+        >
+          ＋ Choose workspace
+        </button>
+        <button class="full" data-i18n="appendWorkspace" id="appendWorkspace">
+          ＋ Add workspace / folder
+        </button>
+        <div class="split-buttons">
+          <button data-i18n="addFiles" id="addFiles">Add files</button
+          ><button data-i18n="refresh" id="refreshWorkspace">↻ Refresh</button>
+        </div>
+        <button
+          class="full subtle"
+          data-i18n="reconnectLast"
+          hidden=""
+          id="reconnect"
+        >
+          Reconnect last workspace
+        </button>
+        <div class="workspace-name" id="workspaceName">
+          No workspace selected
+        </div>
+        <p class="hint" id="workspaceHint">
+          Choose a folder to organize its 3D models and textures.
+        </p>
+        <label class="check hint"
+          ><input checked="" id="autoRefresh" type="checkbox" /><span
+            data-i18n="autoRefresh"
+            >Check for folder changes</span
+          ></label
+        >
+        <div
+          aria-label="Connected workspaces"
+          class="workspace-sources"
+          data-i18n-aria-label="connectedWorkspaces"
+          id="workspaceSources"
+        ></div>
+        <div class="section-label spaced">
+          EXPLORER <span id="assetCount">0 models</span>
+        </div>
+        <nav
+          aria-label="Workspace folders"
+          data-i18n-aria-label="workspaceFolders"
+          id="folderTree"
+        ></nav>
+        <div class="sidebar-bottom">
+          <button class="full" data-i18n="importMetrics" id="importMetrics">
+            Import metrics / prompts</button
+          ><button
+            class="full quiet"
+            data-i18n="csvTemplate"
+            id="metadataTemplate"
+          >
+            Download CSV template ↓</button
+          ><button class="full quiet" data-i18n="openDemo" id="demoButton">
+            Open demo workspace ↗
+          </button>
+          <p class="hint">
+            GLB · glTF · OBJ · PLY · STL<br />Gaussian .ply / .splat / .ksplat
+          </p>
+        </div>
+      </aside>
+      <main>
+        <div class="heading-row">
+          <div>
+            <div class="eyebrow">FROM MODELS TO FIGURES</div>
+            <h1 data-i18n="heading">Your 3D research workspace</h1>
+            <p class="subhead" data-i18n="subheading">
+              Organize models, compare views, and export every angle.
+            </p>
+          </div>
+          <div class="view-tabs" role="tablist">
+            <button
+              aria-selected="true"
+              class="active"
+              data-i18n="libraryTab"
+              id="libraryTab"
+              role="tab"
+            >
+              ▦ Model library</button
+            ><button aria-selected="false" id="compareTab" role="tab">
+              <span data-i18n="compareTab">◫ Compare</span
+              ><span id="compareCount">0</span>
+            </button>
+          </div>
+        </div>
+        <section
+          aria-label="Model filters"
+          class="toolbar"
+          data-i18n-aria-label="filters"
+        >
+          <label class="search"
+            ><span>⌕</span
+            ><input
+              aria-label="Search models"
+              data-i18n-aria-label="searchModels"
+              data-i18n-placeholder="searchPlaceholder"
+              id="search"
+              placeholder="Search files, categories, methods, or prompts…" /></label
+          ><label
+            ><span data-i18n="category">Category</span
+            ><select id="category">
+              <option data-i18n="allCategories" value="">All categories</option>
+            </select></label
+          ><label
+            ><span data-i18n="sort">Sort by</span
+            ><select id="sort">
+              <option data-i18n="sortName" value="name">File name</option>
+              <option data-i18n="category" value="category">Category</option>
+              <option data-i18n="sortModified" value="modified">
+                Modified
+              </option>
+              <option data-i18n="sortSize" value="size">File size</option>
+              <option data-i18n="sortFormat" value="format">Format</option>
+              <option data-i18n="sortMetric" value="metric">
+                Metric score
+              </option>
+              <option data-i18n="sortDelta" value="delta">
+                Δ Metric difference
+              </option>
+            </select></label
+          ><button
+            data-i18n-title="sortDirectionHint"
+            id="sortDirection"
+            title="Toggle ascending or descending order"
+          >
+            ↑ Ascending
+          </button>
+        </section>
+        <section
+          aria-label="Compare across folders"
+          class="group-toolbar"
+          data-i18n-aria-label="groupComparison"
+        >
+          <label
+            ><span data-i18n="layout">Layout</span
+            ><select id="collectionLayout">
+              <option data-i18n="layoutMatched" value="matched">
+                Match by name
+              </option>
+              <option data-i18n="layoutFolders" value="folders">
+                Group by folder
+              </option>
+              <option data-i18n="layoutGrid" value="grid">
+                All models grid
+              </option>
+            </select></label
+          >
+          <label
+            ><span data-i18n="matchRule">Match by</span
+            ><select id="matchRule">
+              <option data-i18n="matchName" value="name">Full file name</option>
+              <option data-i18n="matchStem" value="stem">
+                Name without extension
+              </option>
+              <option data-i18n="matchRelative" value="relative">
+                Relative path in group
+              </option>
+            </select></label
+          >
+          <p class="hint" id="matchSummary"></p>
+          <div
+            aria-label="Folders to compare"
+            class="group-choices"
+            data-i18n-aria-label="comparisonFolders"
+            id="groupChoices"
+          ></div>
+        </section>
+        <section class="metric-toolbar" hidden="" id="metricFilters">
+          <label
+            ><span data-i18n="metric">Metric</span
+            ><select id="metric"></select></label
+          ><label class="delta-field">OURS<select id="ours"></select></label
+          ><label class="delta-field">BASE<select id="base"></select></label
+          ><label class="delta-field"
+            ><span data-i18n="deltaRange">Δ Range</span
+            ><select id="sign">
+              <option data-i18n="all" value="all">All</option>
+              <option data-i18n="positive" value="positive">
+                Greater than 0
+              </option>
+              <option data-i18n="negative" value="negative">Less than 0</option>
+            </select></label
+          ><span class="hint" id="metricNote"
+            >Δ = OURS − BASE; missing values appear last.</span
+          >
+        </section>
+        <div class="collection-line">
+          <span id="resultCount">0 models</span>
+          <div>
+            <button class="quiet" data-i18n="selectResults" id="selectVisible">
+              Select filtered models</button
+            ><button
+              class="quiet"
+              data-i18n="clearSelection"
+              id="clearSelection"
+            >
+              Clear selection</button
+            ><button class="accent" id="compareSelected">
+              <span data-i18n="compareSelected">Compare selection</span
+              ><span id="selectedCount">0</span> →
+            </button>
+          </div>
+        </div>
+        <section id="libraryPane">
+          <div class="empty" id="empty">
+            <div class="empty-cube">◈</div>
+            <h2 data-i18n="emptyHeading">Start with a workspace</h2>
+            <p>
+              <span data-i18n="emptyHint1"
+                >Drop models or a folder, or choose a workspace on the
+                left.</span
+              ><br /><span data-i18n="emptyHint2"
+                >Files are read and rendered locally in your browser.</span
+              >
+            </p>
+            <button class="primary" data-i18n="tryDemo" id="emptyDemo">
+              Try demo models →
+            </button>
+          </div>
+          <div class="gallery" id="gallery"></div>
+          <button
+            class="full quiet"
+            data-i18n="moreModels"
+            hidden=""
+            id="moreModels"
+          >
+            Show more models
+          </button>
+        </section>
+        <section hidden="" id="comparePane">
+          <div class="compare-paging" hidden="" id="comparePaging">
+            <span id="comparePageLabel"></span>
+            <button data-i18n="previousMethods" id="comparePrevious">
+              ← Previous methods
+            </button>
+            <button data-i18n="nextMethods" id="compareNext">
+              Next methods →
+            </button>
+          </div>
+          <div class="compare-tools">
+            <label class="check"
+              ><input checked="" id="syncCamera" type="checkbox" /><span
+                data-i18n="syncCamera"
+                >Sync cameras</span
+              ></label
+            ><button data-i18n="fitView" id="fitView">Fit model</button
+            ><button data-i18n="resetView" id="resetView">Reset view</button
+            ><button data-i18n="saveCamera" id="saveCamera">
+              Export camera</button
+            ><button data-i18n="loadCamera" id="loadCamera">
+              Import camera
+            </button>
+          </div>
+          <p class="hint compare-interaction-hint" data-i18n="interactionHint">
+            Scroll inside a canvas to zoom, outside to scroll the page · Drag to
+            rotate · Right-drag to pan
+          </p>
+          <div class="viewports" id="viewports"></div>
+          <div class="empty" id="compareEmpty">
+            <h2 data-i18n="compareEmptyHeading">Select models to compare</h2>
+            <p>
+              <span data-i18n="compareEmptyHint1"
+                >Select models in the library, then click “Compare
+                selection”.</span
+              ><br /><span data-i18n="compareEmptyHint2"
+                >Click a thumbnail to preview a model. Compare up to four models
+                per page.</span
+              >
+            </p>
+          </div>
+          <p class="hint" data-i18n="focusHint">
+            Click a model title to select it, then adjust its axes and transform
+            on the right.
+          </p>
+        </section>
+        <section class="selection-tray" hidden="" id="selectionTray">
+          <div>
+            <b id="trayCount"></b
+            ><span data-i18n="exportQueue">In the export queue</span>
+          </div>
+          <button class="primary" data-i18n="exportBatch" id="exportBatch">
+            Export figures ZIP ↗
+          </button>
+        </section>
+      </main>
+      <aside class="inspector">
+        <div class="section-label">
+          FIGURE SETTINGS
+          <span data-i18n="figureSettings">Figure settings</span>
+        </div>
+        <label
+          ><span data-i18n="displayPass">Render pass</span
+          ><select id="mode">
+            <option data-i18n="optionColor" value="color">Color · Unlit</option>
+            <option data-i18n="optionRelight" value="relight">Relit</option>
+            <option data-i18n="optionClay" value="clay">Clay</option>
+            <option data-i18n="optionNormal" value="normal">
+              Camera-space normals
+            </option>
+            <option data-i18n="optionDepth" value="depth">Linear depth</option>
+            <option data-i18n="optionMask" value="mask">Foreground mask</option>
+          </select></label
+        >
+        <div class="double">
+          <label
+            ><span data-i18n="projection">Projection</span
+            ><select id="projection">
+              <option data-i18n="perspective" value="perspective">
+                Perspective
+              </option>
+              <option data-i18n="orthographic" value="orthographic">
+                Orthographic
+              </option>
+            </select></label
+          ><label
+            ><span data-i18n="background">Preview background</span
+            ><select id="background">
+              <option data-i18n="checker" value="checker">Checkerboard</option>
+              <option data-i18n="white" value="white">White</option>
+              <option data-i18n="dark" value="dark">Dark</option>
+            </select></label
+          >
+        </div>
+        <label class="check"
+          ><input checked="" id="normalize" type="checkbox" /><span
+            data-i18n="normalize"
+            >Center and normalize size</span
+          ></label
+        >
+        <p class="hint" data-i18n="transformHint">
+          Transforms apply to preview and export, and are saved in the project.
+        </p>
+        <details open="">
+          <summary data-i18n="camera">Camera</summary>
+          <div class="double">
+            <label
+              ><span data-i18n="azimuth">Azimuth °</span
+              ><input id="azimuth" step="5" type="number" value="30" /></label
+            ><label
+              ><span data-i18n="elevation">Elevation °</span
+              ><input
+                id="elevation"
+                max="89"
+                min="-89"
+                step="5"
+                type="number"
+                value="20" /></label
+            ><label
+              ><span data-i18n="distance">Distance</span
+              ><input
+                id="distance"
+                max="100"
+                min=".15"
+                step=".1"
+                type="number"
+                value="3.2" /></label
+            ><label
+              ><span data-i18n="fov">Field of view °</span
+              ><input id="fov" max="100" min="10" type="number" value="40"
+            /></label>
+          </div>
+          <label
+            ><span data-i18n="orthoSpan">Orthographic span</span
+            ><input
+              id="orthoSpan"
+              max="100"
+              min=".05"
+              step=".1"
+              type="number"
+              value="2.2"
+          /></label>
+          <div class="preset-views" id="presetViews"></div>
+        </details>
+        <details open="">
+          <summary data-i18n="relighting">Relighting</summary>
+          <button class="full accent" data-i18n="autoLight" id="autoLight">
+            ✦ Auto three-point lighting</button
+          ><label
+            ><span data-i18n="lightStyle">Lighting style</span
+            ><select id="light">
+              <option data-i18n="lightStudio" value="studio">
+                Neutral studio
+              </option>
+              <option data-i18n="lightSoft" value="soft">Soft fill</option>
+              <option data-i18n="lightRim" value="rim">Rim emphasis</option>
+            </select></label
+          >
+          <div class="double">
+            <label
+              ><span data-i18n="intensity">Intensity</span
+              ><input
+                id="intensity"
+                max="5"
+                min="0"
+                step=".1"
+                type="number"
+                value="1" /></label
+            ><label
+              ><span data-i18n="exposure">Exposure</span
+              ><input
+                id="exposure"
+                max="3"
+                min=".1"
+                step=".1"
+                type="number"
+                value="1"
+            /></label>
+          </div>
+          <p class="hint" data-i18n="lightHint">
+            Position key, fill, and rim lights relative to the camera. Uses
+            existing surface colors; no AI delighting or material
+            reconstruction.
+          </p>
+        </details>
+        <details>
+          <summary data-i18n="transform">Model transform</summary>
+          <p class="hint" id="activeName">Preview a model first</p>
+          <label
+            ><span data-i18n="upAxis">Native up axis</span
+            ><select id="up">
+              <option>Y</option>
+              <option>Z</option>
+              <option>X</option>
+            </select></label
+          >
+          <div class="triple">
+            <label>X °<input id="rotateX" type="number" value="0" /></label
+            ><label>Y °<input id="rotateY" type="number" value="0" /></label
+            ><label>Z °<input id="rotateZ" type="number" value="0" /></label>
+          </div>
+          <label
+            ><span data-i18n="modelScale">Additional scale</span
+            ><input
+              id="modelScale"
+              min=".001"
+              step=".1"
+              type="number"
+              value="1" /></label
+          ><label
+            ><span data-i18n="surface">Gaussian companion mesh</span
+            ><select id="surface">
+              <option data-i18n="unpaired" value="">Not paired</option>
+            </select></label
+          >
+          <p class="hint" data-i18n="surfaceHint">
+            Gaussian normals, clay, and relighting use the companion mesh. The
+            export manifest records the source representation.
+          </p>
+        </details>
+        <details>
+          <summary data-i18n="depthEncoding">Depth encoding</summary>
+          <div class="double">
+            <label
+              ><span data-i18n="depthNear">Near depth</span
+              ><input
+                id="depthNear"
+                min="0"
+                step=".1"
+                type="number"
+                value=".1" /></label
+            ><label
+              ><span data-i18n="depthFar">Far depth</span
+              ><input id="depthFar" min=".01" step=".1" type="number" value="8"
+            /></label>
+          </div>
+          <p class="hint" data-i18n="depthHint">
+            Camera-space Z as 8-bit PNG grayscale, clipped to the selected
+            range. The manifest records the range and normalization.
+          </p>
+        </details>
+        <details>
+          <summary data-i18n="metadata">Sample metadata</summary>
+          <label
+            ><span data-i18n="sampleId">Sample ID for pairing</span
+            ><input id="editSample" placeholder="chair_001" /></label
+          ><label
+            ><span data-i18n="methodName">Method name</span
+            ><input id="editMethod" placeholder="ours" /></label
+          ><label
+            ><span data-i18n="category">Category</span
+            ><input id="editCategory" placeholder="Furniture" /></label
+          ><label
+            >Text prompt<textarea
+              data-i18n-placeholder="promptPlaceholder"
+              id="editPrompt"
+              placeholder="Text prompt for this model"
+              rows="4"
+            ></textarea>
+          </label>
+          <p class="hint" data-i18n="metadataHint">
+            Edits are saved in the project, leaving source files intact. Methods
+            with the same sample ID are paired for Δ.
+          </p>
+          <div class="hint" id="activeMetrics"></div>
+        </details>
+        <details open="">
+          <summary data-i18n="export">Export</summary>
+          <label
+            ><span data-i18n="pngSize">Transparent PNG size</span
+            ><select id="size">
+              <option value="512">512 × 512</option>
+              <option selected="" value="1024">1024 × 1024</option>
+              <option value="2048">2048 × 2048</option>
+              <option value="4096">4096 × 4096</option>
+            </select></label
+          ><button
+            class="primary full"
+            data-i18n="exportCurrent"
+            id="exportCurrent"
+          >
+            Download current PNG ↓
+          </button>
+          <div class="section-label spaced" data-i18n="exportPasses">
+            Batch render passes
+          </div>
+          <div class="pass-choices" id="passChoices"></div>
+          <label class="check"
+            ><input id="multiView" type="checkbox" /><span data-i18n="multiView"
+              >Multi-view turntable</span
+            ></label
+          ><label
+            ><span data-i18n="views">Azimuths (comma-separated)</span
+            ><input id="views" value="0,45,90,135,180,225,270,315"
+          /></label>
+          <div class="double">
+            <label
+              ><span data-i18n="columns">Sheet columns</span
+              ><select id="columns">
+                <option>1</option>
+                <option selected="">2</option>
+                <option>3</option>
+                <option>4</option>
+              </select></label
+            ><label
+              ><span data-i18n="padding">Padding px</span
+              ><input id="padding" max="100" min="0" type="number" value="24"
+            /></label>
+          </div>
+          <label class="check"
+            ><input checked="" id="labels" type="checkbox" /><span
+              data-i18n="editableLabels"
+              >Keep editable sheet labels</span
+            ></label
+          ><label
+            ><span data-i18n="caption">Sheet title</span
+            ><input id="caption" placeholder="Qualitative comparison"
+          /></label>
+          <p class="hint" data-i18n="exportHint">
+            The ZIP includes individual PNGs, editable SVG sheets, and a JSON
+            manifest. All exported images have transparent backgrounds.
+          </p>
+        </details>
+      </aside>
+    </div>
+    <footer class="statusbar">
+      <span id="status" role="status">Ready</span
+      ><span>WEBGL · LOCAL FIRST <span id="fileTotal"></span></span>
+    </footer>
+    <div hidden="" id="dropOverlay">
+      <div>
+        <span data-i18n="dropWorkspace">Drop to import a workspace</span
+        ><span data-i18n="dropTypes">Models · Folders · Project ZIP</span>
+      </div>
+    </div>
+    <dialog id="progressDialog">
+      <div class="eyebrow">EXPORT STUDIO</div>
+      <h2 data-i18n="preparingExport">Preparing research figures</h2>
+      <progress id="exportProgress" max="1" value="0"></progress>
+      <p id="exportStatus"></p>
+      <button data-i18n="cancelExport" id="cancelExport">Cancel export</button>
+    </dialog>
+    <dialog id="helpDialog">
+      <div class="eyebrow">QUICK START</div>
+      <h2 data-i18n="helpHeading">From folders to paper figures</h2>
+      <ol>
+        <li data-i18n="help1">
+          Choose one or more workspaces. Compare each workspace as a group, or
+          group by one to three subfolder levels.
+        </li>
+        <li data-i18n="help2">
+          Matching models line up automatically. Missing methods stay empty;
+          unmatched and conflicting names remain grouped by folder. You can
+          change the matching rule.
+        </li>
+        <li data-i18n="help3">
+          Click “Compare row” for synchronized views. Page through more than
+          four methods, and add any number of models to the export queue.
+        </li>
+        <li data-i18n="help4">
+          Adjust the camera, axes, and lighting. Original color, relighting, and
+          data passes remain separate.
+        </li>
+        <li data-i18n="help5">
+          Download a single image, or batch-export models, views, and passes.
+        </li>
+        <li data-i18n="help6">
+          Save settings as a project JSON, or pack a project ZIP that includes
+          the files.
+        </li>
+      </ol>
+      <p data-i18n="helpMetrics">
+        Metrics CSVs use path, sample, method, category, prompt, and custom
+        numeric columns. Δ pairs by sample and requires exactly one valid score
+        for each method.
+      </p>
+      <p data-i18n="helpFolders">
+        Folder connections depend on browser support. Chrome / Edge can retain
+        folder handles and rescan; other browsers use snapshots that must be
+        reimported after changes. Project JSON does not include model files.
+      </p>
+      <p data-i18n="helpGaussian">
+        Gaussian splats have no reliable surface material. Pair a mesh for
+        normals and relighting. Rendered pixels may vary slightly across
+        devices.
+      </p>
+      <form method="dialog">
+        <button class="primary" data-i18n="getStarted">Get started</button>
+      </form>
+    </dialog>
+    <input hidden="" id="filesInput" multiple="" type="file" /><input
+      hidden=""
+      id="directoryInput"
+      multiple=""
+      type="file"
+      webkitdirectory=""
+    /><input
+      accept=".json,.zip"
+      hidden=""
+      id="projectInput"
+      type="file"
+    /><input
+      hidden=""
+      id="appendDirectoryInput"
+      multiple=""
+      type="file"
+      webkitdirectory=""
+    /><input
+      accept=".json,.csv"
+      hidden=""
+      id="metricsInput"
+      type="file"
+    /><input accept=".json" hidden="" id="cameraInput" type="file" />
+    <script src="/src/main.js" type="module"></script>
+  </body>
+</html>

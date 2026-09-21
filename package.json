@@ -1,0 +1,38 @@
+{
+  "name": "research-3d-studio",
+  "version": "0.3.1",
+  "private": true,
+  "type": "module",
+  "description": "Local-first 3D research workspace, synchronized comparison and reproducible figure export.",
+  "license": "MIT",
+  "scripts": {
+    "dev": "vite --host 127.0.0.1",
+    "build": "vite build",
+    "preview": "vite preview --host 127.0.0.1",
+    "test": "node --test tests/*.test.js",
+    "test:e2e": "playwright test",
+    "demo": "node scripts/create-demo.mjs",
+    "check:publication": "node scripts/check-publication.mjs"
+  },
+  "dependencies": {
+    "@mkkellogg/gaussian-splats-3d": "0.4.7",
+    "fflate": "0.8.3",
+    "three": "0.160.1"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.63.0",
+    "pngjs": "7.0.0",
+    "prettier": "3.9.8",
+    "vite": "7.3.6"
+  },
+  "engines": {
+    "node": ">=22.12.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Qiu-yuChen/research-3d-studio.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Qiu-yuChen/research-3d-studio/issues"
+  }
+}

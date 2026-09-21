@@ -1,0 +1,47 @@
+Research 3D Studio — Local deployment / 本地部署
+
+STATIC RELEASE (no Node.js required)
+1. Extract the static release ZIP.
+2. Open a terminal in the folder containing index.html.
+3. With Python 3 installed, run:
+
+   python3 -m http.server 8080 --bind 127.0.0.1
+
+4. Open http://127.0.0.1:8080/ in your browser.
+5. Press Ctrl+C in the terminal to stop the server.
+
+All rendering dependencies and demo assets are bundled. Once the release is
+downloaded, a local deployment works without the public site or internet access.
+Serve the folder over HTTP; do not open index.html directly using file://.
+Chrome / Edge support reconnectable workspace folders on localhost. Other
+browsers can use file and folder import. Models are processed in your browser.
+
+FROM SOURCE
+Requires Node.js 22.12+ or a compatible newer release.
+Inside the source folder:
+
+   npm ci
+   npm run dev
+
+Open http://127.0.0.1:5178/.
+To create a static release: npm run build
+To preview the build: npm run preview (http://127.0.0.1:4178/)
+The dist/ folder can also be served by any static HTTP server.
+Use HTTPS for a non-local deployment with persistent folder connections.
+
+LANGUAGE
+English is the default. Select 中文 in the top-bar Language menu to use Chinese.
+Your choice is stored in this browser for this site.
+
+中文说明
+本项目允许本地部署，不需要 专用 GPU、CUDA、账号或后端推理服务。
+解压静态包，在 index.html 所在目录执行上面的 Python 命令，
+打开 http://127.0.0.1:8080/ 即可。不要直接双击 HTML 文件。
+下载静态包后可断网运行，渲染依赖与示例均已包含。
+从源码运行需要 Node.js 22.12+，执行 npm ci 和 npm run dev。
+界面默认英语，右上角 Language 可切换中文，并记住偏好。
+
+LICENSE
+Project code and demo assets use the MIT license. See LICENSE.txt and licenses/.
+Keep the license notices when redistributing. Imported models and textures
+retain their own licenses.
