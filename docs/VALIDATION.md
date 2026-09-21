@@ -6,6 +6,8 @@ Verified on 2026-09-21 with Node.js 24.14.0 and Chromium on macOS. All 15 unit t
 
 Local browser checks used an existing Chromium installation via `PLAYWRIGHT_CHROMIUM_EXECUTABLE`; the initial default-browser launch failed because that Playwright browser binary was not installed. CI installs its required Chromium version explicitly.
 
+The first Linux CI installation exposed an incomplete optional Rollup dependency entry in the lockfile. Regenerating the lockfile with a clean npm cache restored its version and integrity metadata without changing existing dependency versions; a fresh `npm ci` then passed locally. This avoids relying on an already-populated development install.
+
 ## v0.3.0 English / Chinese interface and local deployment
 
 Verified on 2026-09-21 with Node.js 24.14.0 and Chromium on macOS.
